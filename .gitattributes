@@ -1,0 +1,4 @@
+# Keep Linux line endings in the repo and on checkout (the Raspberry Pi runs these scripts)
+* text=auto eol=lf
+*.png binary
+*.jpg binary

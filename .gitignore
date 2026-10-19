@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets and runtime data (never commit)
+.env
+demo/.env
+demo/data/
+
+# Local tooling
+.claude/

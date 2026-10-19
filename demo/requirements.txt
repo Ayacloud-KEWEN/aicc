@@ -1,0 +1,6 @@
+pipecat-ai[azure,deepseek,deepgram,elevenlabs,anthropic,webrtc,silero]==1.13.0
+fastapi
+uvicorn
+python-dotenv
+tzdata
+stripe>=16
