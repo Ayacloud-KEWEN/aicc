@@ -55,7 +55,9 @@ RestartSec=3
 WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
-sudo systemctl enable --now $SERVICE
+sudo systemctl enable $SERVICE
+# restart, not just start: an already-running service (e.g. from an older install folder) must pick up the new unit
+sudo systemctl restart $SERVICE
 sleep 3
 curl -fsS "http://127.0.0.1:$PORT/api/config" && echo
 
