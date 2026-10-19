@@ -62,6 +62,27 @@
 
 4. 脚本结束时会打印 `https://<树莓派名>.<tailnet>.ts.net:10051`。在已登录 Tailscale 的手机上打开这个地址即可演示；后厨看板在同一地址加 `/kitchen`。
 
+## 用 GitHub 安装和更新（推荐）
+
+代码在 https://github.com/Ayacloud-KEWEN/aicc ，程序在仓库的 `demo/` 目录里。
+
+**第一次安装**（以 `/mnt/ssd/aicc` 为例）：
+
+```bash
+cd /mnt/ssd && git clone https://github.com/Ayacloud-KEWEN/aicc.git
+cd /mnt/ssd/aicc/demo
+cp .env.example .env    # 填好 Key（或从旧目录复制 .env）
+bash deploy/setup_pi.sh
+```
+
+**以后更新**（拉取最新代码、装新依赖、重启服务）：
+
+```bash
+cd /mnt/ssd/aicc/demo && bash deploy/update_pi.sh
+```
+
+`.env` 和 `data/`（订单）不在仓库里，`git pull` 不会覆盖它们。
+
 ## 常用命令
 
 ```bash
